@@ -1,6 +1,7 @@
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
 #AutoIt3Wrapper_Icon=ResTool_Rebuilder.ico
 #AutoIt3Wrapper_Compression=4
+#AutoIt3Wrapper_Res_Fileversion=0.2.150130
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 #cs ----------------------------------------------------------------------------
 
@@ -78,9 +79,8 @@ Func _Start()
 		_Download("SB.exe", "\Script\Scanners\SB", $restech & "Spybot.exe")
 		_Download("SAS.exe", "\Script\Scanners\SAS", $restech & "SAS.exe")
 		_Download("HC.exe", "\Script\Scanners\HC", "http://go.trendmicro.com/housecall8/HousecallLauncher64.exe");HC Site (can put on server)
-		_Download("HC32.exe", "\Script\Scanners\HC", "http://go.trendmicro.com/housecall8/HousecallLauncher.exe");HC Site (can put on server)
 		_Download("CC.exe", "\Script\", $restech & "Ccleaner.exe")
-		_Download("AIO.exe", "\Script\", "");AIO Site (can put on server)
+		_Download("AIO.exe", "\Script\", "http://www.tweaking.com/files/setups/tweaking.com_windows_repair_aio_setup.exe");AIO Site (can put on server)
 		_Download("devcon.exe", "\Script\OOB\32", "http://intranet.restech.niu.edu/f/1041/devcon32.exe");Intracloud
 		_Download("devcon.exe", "\Script\OOB\64", "http://intranet.restech.niu.edu/f/1042/devcon64.exe");Intracloud
 		_Download("WiFi.xml", "\Script\OOB", "http://intranet.restech.niu.edu/f/1037/WiFi.xml");Intracloud
@@ -92,8 +92,11 @@ Func _Start()
 		_Download("RAVG86.exe", "\Script\Uninstallers", $restech & "AVGr86.exe")
 		_Download("RAVS.exe", "\Script\Uninstallers", $restech & "Aswclear.exe")
 		_Download("RKAS.exe", "\Script\Uninstallers", $restech & "KRT.exe")
-		_Download("ResToolNXT.exe", "", "http://intranet.restech.niu.edu/f/1036/ResTool%20NXT.exe")
-		_Download("ResToolNXT_x64.exe", "", "http://intranet.resetch.niu.edu/f/1035/ResTool%20NXT_x64.exe")
+		_Download("ResToolNXT.exe", "\", "http://intranet.restech.niu.edu/f/1036/ResTool%20NXT.exe")
+		_Download("ResToolNXT_x64.exe", "\", "http://intranet.restech.niu.edu/f/1035/ResTool%20NXT_x64.exe")
+		_Download("Pharos.exe", "\Script\Installers", "http://vm-pharosprint1.niunt.niu.edu/uniprint/AnywherePrint_for_Lte.exe")
+		_Download("MWBAR.exe", "\Script\Scanners", "http://downloads.malwarebytes.org/file/mbar/")
+		_Download("TDSS.exe", "\Script\Scanners", "http://media.kaspersky.com/utilities/VirusUtilities/EN/tdsskiller.exe")
 	EndIf
 	GUICtrlSetData($Progresso, 100)
 	GUICtrlSetData($Text, "Done!")
